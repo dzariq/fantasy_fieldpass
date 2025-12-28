@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  nextjs-app:
+    build:
+      context: .
+      args:
+        FANTASY_API_BASE_URL: ${FANTASY_API_BASE_URL}
+        NEXT_PUBLIC_FANTASY_DASHBOARD_URL: ${NEXT_PUBLIC_FANTASY_DASHBOARD_URL}
+        NEXT_PUBLIC_FANTASY_COMPETITION_ID: ${NEXT_PUBLIC_FANTASY_COMPETITION_ID}
+        NEXT_PUBLIC_FANTASY_API_BASE_URL: ${NEXT_PUBLIC_FANTASY_API_BASE_URL}
+    env_file:
+      - .env
+    networks:
+      - shared-network
+    restart: unless-stopped
+    expose:
+      - "3000"
+networks:
+  shared-network:
+    external: true 

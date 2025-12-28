@@ -1,0 +1,28 @@
+{
+  "entry_id": "87657512",
+  "manager": "Dzariq Mirza",
+  "name": "Badanamu",
+  "phone": "60186663282",
+  "team_data": [
+    {
+      "matchweek": 1,
+      "is_new": true,
+      "record": {
+        "transfers": [],
+        "triple": false,
+        "benchboost": false,
+        "wildcard": false,
+        "credit": 1000
+      },
+      "picks": {
+        "formation": "442",
+        "gk": [],
+        "df": [],
+        "mf": [],
+        "st": [],
+        "subgk": [],
+        "sub": []
+      }
+    }
+  ]
+}

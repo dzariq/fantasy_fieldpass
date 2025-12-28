@@ -1,0 +1,14 @@
+{
+  "_id": {
+    "$oid": "6928227aebdf628b5f8bf1d6"
+  },
+  "season": "2025",
+  "benchboost": 6,
+  "credit": 1000,
+  "deadline": "1764432000",
+  "matchweek": 1,
+  "max_same_club": 3,
+  "transfer": 0,
+  "triple": 4,
+  "wildcard": 2
+}

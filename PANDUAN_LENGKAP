@@ -1,0 +1,387 @@
+# ⚽ Panduan Lengkap Fantasy Football
+
+## 🎯 Apa Yang Dah Siap
+
+### ✅ Feature Utama
+
+1. **Pilih Pemain**
+   - 18 pemain dari 3 pasukan
+   - Filter by position (GK, DF, MF, ST)
+   - Cari pemain by nama
+   - Budget: $1000
+
+2. **Formation Selector** (BARU!)
+   - 7 pilihan formation:
+     - 4-4-2 (Balanced)
+     - 4-3-3 (Attacking)
+     - 4-5-1 (Defensive)
+     - 3-5-2 (Midfield strong)
+     - 3-4-3 (Attack heavy)
+     - 5-3-2 (Very defensive)
+     - 5-4-1 (Ultra defensive)
+
+3. **Auto-Arrange Pemain**
+   - Pemain automatically susun ikut formation
+   - Starting XI: Ikut formation yang dipilih
+   - Bench: 4 pemain
+
+4. **Transfer System**
+   - Team baru: Unlimited transfers (∞)
+   - Team sedia ada: 2 transfers per matchweek
+
+5. **Rules**
+   - Maximum 3 pemain dari team yang sama
+   - Position limits:
+     - GK: 2 (1 main, 1 bench)
+     - DF: 5 total
+     - MF: 5 total
+     - ST: 3 total
+
+## 🎮 Cara Guna
+
+### 1. Buka App
+```bash
+npm run dev
+# Buka: http://localhost:3000
+```
+
+### 2. Pilih Formation
+- Tengok bahagian atas pitch
+- Click formation yang nak guna (contoh: 4-4-2)
+- Pitch akan show formation tu
+
+### 3. Pilih Pemain
+- Click butang **+** (hijau, bawah kanan)
+- Panel pemain akan keluar
+- Filter by position atau search nama
+- Click pemain untuk add to team
+
+### 4. Build Squad
+- Pilih **15 pemain** total:
+  - 2 GK (1 main, 1 bench)
+  - 5 DF (ikut formation + bench)
+  - 5 MF (ikut formation + bench)
+  - 3 ST (ikut formation + bench)
+- Budget: Jangan lebih $1000
+- Max 3 pemain dari team sama
+
+### 5. Tukar Formation
+- Click formation lain
+- Pemain akan auto-arrange
+- Formation berubah on pitch
+
+## 📊 Contoh Formation
+
+### 4-4-2 (Popular!)
+```
+Starting XI:
+- 1 GK
+- 4 Defenders
+- 4 Midfielders  
+- 2 Strikers
+
+Bench: 1 GK + 3 pemain lain
+```
+
+### 4-3-3 (Attacking)
+```
+Starting XI:
+- 1 GK
+- 4 Defenders
+- 3 Midfielders
+- 3 Strikers
+
+Bench: 1 GK + 3 pemain lain
+```
+
+### 5-4-1 (Defensive)
+```
+Starting XI:
+- 1 GK
+- 5 Defenders
+- 4 Midfielders
+- 1 Striker
+
+Bench: 1 GK + 3 pemain lain
+```
+
+## 💡 Tips Berguna
+
+### Strategi Pilih Pemain
+
+1. **Goalkeeper (GK)**
+   - Pilih 2: 1 untuk main, 1 untuk bench
+   - Harga: $45-$50
+   - Save $5 untuk pemain lain
+
+2. **Defenders (DF)**
+   - Ambil 5 total
+   - Mix: 2-3 mahal ($60-65), 2-3 murah ($52-58)
+   - Formation 5 belakang? Ambil yang solid
+
+3. **Midfielders (MF)**
+   - Paling penting! Ambil 5 yang bagus
+   - Target: 1-2 premium ($85-95)
+   - Rest: Mid-range ($62-80)
+   - MF score points + assist
+
+4. **Strikers (ST)**
+   - Ambil 3 total
+   - Must have 1 premium ($95+)
+   - 2 lagi boleh mix ($70-75)
+   - Strikers = Goals = Points!
+
+### Budget Strategy
+
+**Total: $1000**
+
+Contoh split:
+- GK (2): $90-95 (9-10%)
+- DF (5): $280-300 (28-30%)
+- MF (5): $380-400 (38-40%)
+- ST (3): $220-240 (22-24%)
+
+**Pro tip**: Spend more on MF & ST!
+
+### Formation Strategy
+
+**Bila guna formation mana?**
+
+- **4-4-2**: Balanced, senang manage
+- **4-3-3**: Ada banyak strikers bagus? Guna ni
+- **4-5-1**: Ada 1 striker jer yang premium
+- **3-5-2**: Midfield kuat, defense kurang
+- **3-4-3**: All-out attack!
+- **5-3-2**: Defensive main safe
+- **5-4-1**: Park the bus strategy
+
+## 🎯 Step-by-Step Tutorial
+
+### Scenario: Build First Team
+
+**Budget: $1000**
+**Formation: 4-4-2**
+
+#### Step 1: Pilih Formation
+```
+Click: 4-4-2 button
+Result: Pitch shows formation
+```
+
+#### Step 2: Pilih GK (Budget: $95)
+```
+1. HAFIZIE AZIZAN - $50 (Main)
+2. AMIR AZMI - $45 (Bench)
+Total spent: $95
+Remaining: $905
+```
+
+#### Step 3: Pilih DF (Budget: $290)
+```
+Formation 4-4-2 need 4 DF main:
+1. LOW CHUN KEONG - $65
+2. M. DNESH - $60
+3. ADAM DANIAL - $55
+4. AFIQ ZAHRIS - $58
+5. IZZAT EMEER - $52 (Bench)
+Total spent: $290
+Remaining: $615
+```
+
+#### Step 4: Pilih MF (Budget: $380)
+```
+Formation 4-4-2 need 4 MF main:
+1. INDRA PUTRA - $95 (Premium!)
+2. IMAN RAIS NAZRI - $90
+3. ALIF IZWAN - $80
+4. ABEL TAM KWANG - $68
+5. AFFIZE FAIZAL - $62 (Bench)
+Total spent: $395
+Remaining: $220
+```
+
+#### Step 5: Pilih ST (Budget: $215)
+```
+Formation 4-4-2 need 2 ST main:
+1. M. TERRENCE - $98 (Premium!)
+2. SHARQAWIY MAHATHIR - $75
+3. QHALIFF RAYYAN - $70 (Bench)
+Total spent: $243
+Remaining: -$23 (OVER BUDGET!)
+```
+
+**Oops! Over budget. Adjust:**
+```
+Tukar SHARQAWIY ($75) → QHALIFF ($70)
+Final ST:
+1. M. TERRENCE - $98
+2. QHALIFF RAYYAN - $70
+3. SHARQAWIY MAHATHIR - $75 (Bench)
+
+Total team value: $1003
+Adjustment needed: Remove $3
+```
+
+**Final adjustment**: Tukar defender
+```
+ADAM DANIAL ($55) → HAFIZ IBRAHIM ($54)
+Final: $1002 (masih over $2)
+
+AFIQ ZAHRIS ($58) → IZZAT EMEER ($52)
+Final: $996 ✅ (Save $4!)
+```
+
+### Final Squad:
+```
+Formation: 4-4-2
+Total Value: $996
+Remaining: $4
+
+GK: HAFIZIE AZIZAN ($50)
+
+DF: LOW CHUN KEONG ($65)
+    M. DNESH ($60)
+    ADAM DANIAL ($55)
+    IZZAT EMEER ($52)
+
+MF: INDRA PUTRA ($95)
+    IMAN RAIS NAZRI ($90)
+    ALIF IZWAN ($80)
+    ABEL TAM KWANG ($68)
+
+ST: M. TERRENCE ($98)
+    QHALIFF RAYYAN ($70)
+
+BENCH:
+- GK: AMIR AZMI ($45)
+- AFIQ ZAHRIS ($58)
+- AFFIZE FAIZAL ($62)
+- SHARQAWIY MAHATHIR ($75)
+```
+
+## 🔄 Tukar Formation Tengah Game
+
+Cuba tukar dari **4-4-2** ke **4-3-3**:
+
+**Before (4-4-2)**:
+- Starting: 1 GK, 4 DF, 4 MF, 2 ST
+- Bench: 1 GK, 3 outfield
+
+**Click 4-3-3**
+
+**After (4-3-3)**:
+- Starting: 1 GK, 4 DF, 3 MF, 3 ST
+- Bench: 1 GK, 1 MF, 2 outfield
+
+Changes:
+- 1 MF masuk bench (kurang 1 MF slot)
+- 1 ST dari bench masuk main (dapat 1 ST slot)
+
+## 🎨 Interface Guide
+
+### Header (Atas)
+```
+⚽ Fantasy Football          Dzariq Mirza
+                            Badanamu
+
+← [ Matchweek 1 ] →
+
+Budget: $162  Squad: 13/15  Transfers: ∞
+```
+
+### Formation Selector
+```
+Formation:
+[4-4-2] [4-3-3] [4-5-1] [3-5-2] [3-4-3] [5-3-2] [5-4-1]
+  ✓ Active formation
+```
+
+### Pitch View
+```
+┌─────────────────┐
+│   [Formation]   │
+│                 │
+│    ST  ST       │ ← Strikers
+│                 │
+│  MF MF MF MF    │ ← Midfielders
+│                 │
+│  DF DF DF DF    │ ← Defenders
+│                 │
+│      GK         │ ← Goalkeeper
+└─────────────────┘
+```
+
+### Bench
+```
+Substitutes:
+[GK] [Player 1] [Player 2] [Player 3]
+```
+
+### Player Selection (+ button)
+```
+Select Players                      [✕]
+
+[ALL] [GK] [DF] [MF] [ST]
+[🔍 Search players...]
+
+┌────┐ ┌────┐ ┌────┐
+│ GK │ │ GK │ │ DF │
+│ P1 │ │ P2 │ │ P3 │
+└────┘ └────┘ └────┘
+  ✓     
+```
+
+## ❓ FAQ
+
+### Q: Macam mana nak remove pemain?
+**A:** Click pemain yang sama sekali lagi (checkmark hilang)
+
+### Q: Kenapa tak boleh add pemain?
+**A:** Check:
+- Budget cukup ke?
+- Position penuh ke? (Max: 2 GK, 5 DF, 5 MF, 3 ST)
+- Dah ada 3 pemain dari team sama ke?
+- Squad dah 15/15 ke?
+
+### Q: Formation mana best?
+**A:** Depends on strategi:
+- **Balanced**: 4-4-2, 4-3-3
+- **Defensive**: 5-4-1, 5-3-2
+- **Attacking**: 3-4-3, 4-3-3
+
+### Q: Boleh tukar formation bila-bila masa?
+**A:** Yes! Just click formation button lain
+
+### Q: Unlimited transfers untuk apa?
+**A:** First matchweek (is_new: true) dapat unlimited. After tu 2 per week.
+
+### Q: Macam mana nak save team?
+**A:** Auto-save in state. Tapi kalau refresh, hilang. (Future: localStorage)
+
+## 🎯 Summary
+
+**App ni complete dengan:**
+- ✅ 18 pemain dari 3 team
+- ✅ 7 pilihan formation
+- ✅ Auto-arrange by formation
+- ✅ Budget tracking ($1000)
+- ✅ Transfer system (unlimited first week)
+- ✅ Position limits from rules
+- ✅ Mobile responsive
+- ✅ Clean FPL-style design
+
+**Sekarang boleh:**
+1. Pilih formation
+2. Select 15 pemain
+3. Build dream team
+4. Tukar formation bila-bila
+5. Navigate matchweeks
+
+**Cuba sekarang!** Refresh browser dan mula build team! ⚽🏆
+
+---
+
+**Need help?** Tengok:
+- `README.md` - Full English docs
+- `SETUP.md` - Installation guide
+- `UPDATE_FORMATION.md` - Formation update details

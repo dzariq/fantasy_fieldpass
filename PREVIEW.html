@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Football - Design Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00ff87;
+            --primary-dark: #00cc6a;
+            --secondary: #3d195b;
+            --secondary-light: #571e87;
+            --accent: #ff2882;
+            --bg-primary: #0a0e27;
+            --bg-secondary: #141932;
+            --bg-tertiary: #1e2540;
+            --bg-card: #1a1f3a;
+            --text-primary: #ffffff;
+            --text-secondary: #b8c1ec;
+            --text-muted: #7782ab;
+            --border: rgba(184, 193, 236, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Barlow', sans-serif;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-size: 1.125rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin: 1.5rem 0 1rem;
+            color: var(--text-primary);
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .color-item {
+            background: var(--bg-card);
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .color-swatch {
+            width: 100%;
+            height: 60px;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .color-value {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-family: monospace;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid var(--border);
+            transition: all 0.25s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 255, 135, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .feature-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .stat-box {
+            flex: 1;
+            min-width: 150px;
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--bg-primary);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: all 0.25s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgba(0, 255, 135, 0.4);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+            border-radius: 16px;
+            margin-top: 3rem;
+        }
+
+        .cta-section h2 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+        }
+
+        code {
+            background: var(--bg-tertiary);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.875rem;
+            color: var(--primary);
+        }
+
+        .tech-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tech-list li {
+            padding: 0.75rem;
+            background: var(--bg-card);
+            margin-bottom: 0.5rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .tech-list li strong {
+            color: var(--primary);
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 1.5rem 1rem;
+            }
+
+            .stat-value {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚽ Fantasy Football</h1>
+        <p class="subtitle">A modern, mobile-first fantasy football application inspired by FPL</p>
+
+        <!-- Features Section -->
+        <div class="section">
+            <h2>✨ Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <div class="feature-title">Player Selection</div>
+                    <div class="feature-desc">Browse and select from 18 players across 3 teams with smart filtering</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-title">Smart Transfers</div>
+                    <div class="feature-desc">Unlimited transfers for new teams, limited for existing based on rules</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Budget Management</div>
+                    <div class="feature-desc">$1000 starting budget with real-time tracking and validation</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-title">Formation View</div>
+                    <div class="feature-desc">Interactive pitch display with 4-4-2 formation visualization</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <div class="feature-title">Mobile First</div>
+                    <div class="feature-desc">Optimized for mobile devices with touch-friendly interface</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <div class="feature-title">Matchweek Navigation</div>
+                    <div class="feature-desc">Switch between matchweeks with independent team management</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Palette Section -->
+        <div class="section">
+            <h2>🎨 Color Palette</h2>
+            <h3>Primary Colors</h3>
+            <div class="color-grid">
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #00ff87;"></div>
+                    <div class="color-name">Primary Green</div>
+                    <div class="color-value">#00ff87</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #3d195b;"></div>
+                    <div class="color-name">Secondary Purple</div>
+                    <div class="color-value">#3d195b</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #ff2882;"></div>
+                    <div class="color-name">Accent Pink</div>
+                    <div class="color-value">#ff2882</div>
+                </div>
+            </div>
+
+            <h3>Background Colors</h3>
+            <div class="color-grid">
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #0a0e27;"></div>
+                    <div class="color-name">BG Primary</div>
+                    <div class="color-value">#0a0e27</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #141932;"></div>
+                    <div class="color-name">BG Secondary</div>
+                    <div class="color-value">#141932</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #1a1f3a;"></div>
+                    <div class="color-name">BG Card</div>
+                    <div class="color-value">#1a1f3a</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="section">
+            <h2>📊 Project Statistics</h2>
+            <div class="stats-row">
+                <div class="stat-box">
+                    <div class="stat-label">Lines of Code</div>
+                    <div class="stat-value">~1,200</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Components</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Players</div>
+                    <div class="stat-value">18</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Teams</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Budget</div>
+                    <div class="stat-value">$1000</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack Section -->
+        <div class="section">
+            <h2>🛠️ Technology Stack</h2>
+            <ul class="tech-list">
+                <li><strong>Framework:</strong> Next.js 14 with App Router</li>
+                <li><strong>Language:</strong> TypeScript (strict mode)</li>
+                <li><strong>Styling:</strong> Modern CSS with custom properties</li>
+                <li><strong>Fonts:</strong> Barlow & Manrope from Google Fonts</li>
+                <li><strong>State:</strong> React Hooks (useState, useEffect)</li>
+                <li><strong>Data:</strong> JSON-based with TypeScript interfaces</li>
+            </ul>
+        </div>
+
+        <!-- Quick Start Section -->
+        <div class="section">
+            <h2>🚀 Quick Start</h2>
+            <p style="margin-bottom: 1rem;">Get up and running in 3 simple steps:</p>
+            
+            <h3>1. Install Dependencies</h3>
+            <p style="margin-bottom: 1rem;"><code>npm install</code></p>
+
+            <h3>2. Run Development Server</h3>
+            <p style="margin-bottom: 1rem;"><code>npm run dev</code></p>
+
+            <h3>3. Open in Browser</h3>
+            <p>Navigate to <code>http://localhost:3000</code></p>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Ready to Build Your Dream Team?</h2>
+            <p>All files are ready in your output directory. Just install and run!</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button class="button">View README.md</button>
+                <button class="button">Check SETUP.md</button>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem; padding: 2rem; color: var(--text-muted);">
+            <p>Built with Next.js 14 • TypeScript • Modern CSS</p>
+            <p style="margin-top: 0.5rem;">Inspired by Fantasy Premier League</p>
+        </div>
+    </div>
+</body>
+</html>

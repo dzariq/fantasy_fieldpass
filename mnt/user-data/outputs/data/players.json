@@ -1,0 +1,22 @@
+{
+  "_id": {
+    "$oid": "6927310aebdf628b5f8bed76"
+  },
+  "name": "HAFIZIE AZIZAN",
+  "team_id": 4,
+  "availability": "",
+  "dob": "1904-09-23",
+  "identity_number": "040923-01-1821",
+  "image_url": "https://fas.ligakita.my/uploads/player/4/1.png",
+  "image_url2": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Placeholder_no_text.svg/150px-Placeholder_no_text.svg.png",
+  "jersey_number": 1,
+  "nationality": "Malaysia",
+  "next_match": "MBSA(A)",
+  "position": "GK",
+  "rank": 0,
+  "rating": 0,
+  "selection": "",
+  "short_name": "",
+  "total_points": "",
+  "value": 45
+}
